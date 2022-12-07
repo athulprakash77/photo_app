@@ -7,6 +7,8 @@ import { PhotoComponent } from './photo/photo.component';
 import { ViewallphotoComponent } from './viewallphoto/viewallphoto.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import {  HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const myroutes:Routes=[
   {path:"",component: PhotoComponent},
@@ -27,7 +29,9 @@ const myroutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myroutes)
+    RouterModule.forRoot(myroutes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
